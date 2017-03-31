@@ -82,7 +82,7 @@ function render (node, defaultStyle) {
         node._children.map((ch) => render(ch, defaultStyle)).join('\n') :
         content
 
-  return `<div class="${atom}">${children}</div>`
+  return `<div data-name="${node._name}" class="${atom}">${children}</div>`
 }
 
 function randomInt (from, to) {
